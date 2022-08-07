@@ -12,3 +12,8 @@ def change(lst):
     lst[0] = lst_last
     lst[-1] = lst_first
     return lst
+#Функция to_list() принимает неограниченное количество параметров.
+#Обработайте их так, чтобы на выходе получить список из этих элементов.
+
+def to_list(*args):
+    return list(args)
