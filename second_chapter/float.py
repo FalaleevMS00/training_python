@@ -11,6 +11,13 @@ def to_float(num):
 def avg(a, b, c, d):
     return float(round((a + b + c + d) / 4, 5))
 
-print(avg(2.5, 3.33345, 5, 6))
+#Функция mul_to_int(a, b) может принимать целые или вещественные числа.
+#Если результат умножения аргументов не имеет значимых чисел после запятой, то она возвращает его в виде целого числа.
+#В противном случае – в виде float.
 
-print(to_float(3))
+
+def mul_to_int(a, b):
+    c = a * b
+    if float(c).is_integer():
+        return int(c)
+    return float(c)
