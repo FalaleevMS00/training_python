@@ -30,3 +30,26 @@ def useless(s):
     len_list = len(s)
     return max_value / len_list
 
+#Требуется создать функцию list_sort(lst),
+# которая сортирует список чисел по убыванию их абсолютного значения.
+
+def list_sort(lst):
+    lst.sort(key=lambda x: abs(x), reverse=True)
+    return lst
+
+#На входе имеем список строк разной длины.
+#Необходимо написать функцию all_eq(lst), которая вернет новый список из строк одинаковой длины.
+#Длину итоговой строки определяем исходя из самой большой из них.
+#Если конкретная строка короче самой длинной, дополнить ее нижними подчеркиваниями с правого края до требуемого количества символов.
+#Расположение элементов начального списка не менять.
+
+def all_eq(lst):
+    max_str = max(lst, key=lambda x: len(x))
+    len_max_str = len(max_str)
+    new_lst = []
+    for i in lst:
+        count_need = len_max_str - len(i)
+        new_i = i + count_need * "_"
+        new_lst.append(new_i)
+    return new_lst
+
